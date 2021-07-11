@@ -3,6 +3,7 @@ using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.AppCompat.Widget;
 using AndroidX.Core.View;
@@ -19,13 +20,15 @@ namespace FMSMobile
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar> (Resource.Id.toolbar);
+            
             SetSupportActionBar(toolbar);
+            Button button1 = FindViewById<Button>(Resource.Id.startBtn);
+            button1.Click += Button_Click;
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
@@ -47,6 +50,18 @@ namespace FMSMobile
             {
                 base.OnBackPressed();
             }
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.onboard2_main);
+            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
+            drawer.AddDrawerListener(toggle);
+            toggle.SyncState();
+            NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            navigationView.SetNavigationItemSelectedListener(this);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
