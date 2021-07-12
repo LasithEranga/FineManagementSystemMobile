@@ -27,7 +27,7 @@
     android:hint="User Name"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:layout_marginTop="360dp"
+    android:layout_marginTop="340dp"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
     
@@ -65,14 +65,14 @@
 </com.google.android.material.textfield.TextInputLayout>
 
     <Button    
-    android:id="@+id/Button1"  
+    android:id="@+id/Button2"  
     android:layout_width="match_parent"   
     android:layout_height="wrap_content"  
     android:layout_marginTop="500dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:padding="20dp"
-    android:text="Go to page1"  
+    android:text="Login"  
     /> 
 
 </RelativeLayout>

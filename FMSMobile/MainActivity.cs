@@ -17,8 +17,10 @@ namespace FMSMobile
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        Button button2;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
@@ -29,6 +31,8 @@ namespace FMSMobile
             Button button1 = FindViewById<Button>(Resource.Id.startBtn);
             button1.Click += Button_Click;
 
+            
+
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
@@ -38,6 +42,7 @@ namespace FMSMobile
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
         }
+       
 
         public override void OnBackPressed()
         {
@@ -54,15 +59,17 @@ namespace FMSMobile
 
         private void Button_Click(object sender, EventArgs e)
         {
-            SetContentView(Resource.Layout.onboard2_main);
-            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
-            drawer.AddDrawerListener(toggle);
-            toggle.SyncState();
-            NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-            navigationView.SetNavigationItemSelectedListener(this);
+            SetContentView(Resource.Layout.onboard2);
+            button2 = FindViewById<Button>(Resource.Id.Button2);
+            button2.Click += Button_Click_Login;
+
         }
+
+        private void Button_Click_Login(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.onbard3);
+        }
+
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
