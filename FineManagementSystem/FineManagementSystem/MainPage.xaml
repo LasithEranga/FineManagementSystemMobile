@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FineManagementSystem.MainPage"
+             xmlns:local="clr-namespace:FineManagementSystem"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout>
+        <Label Text="Fine Payment Management System" HorizontalTextAlignment="Center" FontSize="35" Margin="0,30" TextColor="White"/>
+        <Image Source="{local:ImageResource FineManagementSystem.Images.Sri_Lanka_Police_logo 2.png}" Margin="0,60"/>
+        <Button Text="LOGIN" FontSize="25" Margin="20,50" CornerRadius="40" BackgroundColor="#171613" TextColor="White" Clicked="Login"></Button>
+    </StackLayout>
+
+</ContentPage>
