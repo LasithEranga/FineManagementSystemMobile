@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineManagementSystem.Android", "FineManagementSystem\FineManagementSystem.Android\FineManagementSystem.Android.csproj", "{DE5071A1-238F-4A37-A103-5C72D411FFF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FineManagementSystem", "FineManagementSystem\FineManagementSystem\FineManagementSystem.csproj", "{1B881894-6D81-4A06-A339-E12F20147754}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE5071A1-238F-4A37-A103-5C72D411FFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5071A1-238F-4A37-A103-5C72D411FFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5071A1-238F-4A37-A103-5C72D411FFF4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DE5071A1-238F-4A37-A103-5C72D411FFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5071A1-238F-4A37-A103-5C72D411FFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE5071A1-238F-4A37-A103-5C72D411FFF4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1B881894-6D81-4A06-A339-E12F20147754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B881894-6D81-4A06-A339-E12F20147754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B881894-6D81-4A06-A339-E12F20147754}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1B881894-6D81-4A06-A339-E12F20147754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B881894-6D81-4A06-A339-E12F20147754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B881894-6D81-4A06-A339-E12F20147754}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45EB9416-827B-4450-A3F4-CEE6704D8B37}
+	EndGlobalSection
+EndGlobal
