@@ -1,13 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FineManagementSystem.Custom_Renderer"
              x:Class="FineManagementSystem.Add"
+             xmlns:locall="clr-namespace:FineManagementSystem"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Add Driver!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <FlexLayout HeightRequest="70" BackgroundColor="Black" Direction="Row">
+            <Image Source="{locall:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
+            <Label Text="Lasith" VerticalOptions="Center" Margin="85,20,0,0" FontSize="20"/>
+            <Image Source="{locall:ImageResource FineManagementSystem.Images.user2.png}" Margin="130,0,0,0"/>
+        </FlexLayout>
+        <ScrollView>
+            <StackLayout>
+           
+            <Label Text="Insert Driver Details" HorizontalOptions="CenterAndExpand" FontSize="30"/>
+            <Label Text="First Name" Margin="20,20,20,0" FontSize="20"/>
+            <Frame CornerRadius="50"  HeightRequest="40" Padding="5,8,0,-5"  BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout >
+                    <local:BorderlessEntry x:Name="fname"  BackgroundColor="Black" Margin="10,0,10,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Last Name" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="lname"   BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Full Name" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="full_name"   BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+                    <Label Text="Address" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="address"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Email Address" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="email"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Owner NIC" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="nic"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Contact No" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="phoneNo"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+                    <Label Text="License" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="license"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+                
+            <Label Text="Vehicle No" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="no_plate"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+                    <Frame BackgroundColor="Transparent">
+                        <FlexLayout Direction="Row">
+                            <Button Text="Clear" FontSize="20"  Margin="0,0,0,0" Padding="20,0,20,0" CornerRadius="8" BackgroundColor="Transparent" BorderWidth="2.5" BorderColor="#DE2828" TextColor="White" ></Button>
+                            <Button Text="Save" FontSize="20" Margin="130,0,0,0" Padding="20,0,20,0"  CornerRadius="8" BackgroundColor="#2D8DD6" TextColor="White" Clicked="AddDriver"></Button>
+                        </FlexLayout>
+
+                    </Frame>
+                </StackLayout>
+
+        </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
