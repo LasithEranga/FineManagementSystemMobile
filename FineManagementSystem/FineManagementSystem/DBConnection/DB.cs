@@ -7,13 +7,33 @@ namespace Fine_Management_System.DBConnection
 {
     class DB
     {
+        private static string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
+
+        public static MySqlConnection GetConn()
+        {
+            MySqlConnection conn = null;
+            
+            try
+            {
+                conn = new MySqlConnection(connStr);
+                conn.Open();
+            }
+
+
+            catch (Exception ec)
+            {
+                Acr.UserDialogs.UserDialogs.Instance.Toast(ec.Message + "sdnfj", new TimeSpan(3));
+            }
+
+            return conn;
+        }
+
         public static MySqlDataReader Read(string query)
         {
             MySqlDataReader dr = null;
             try
             {
                 Acr.UserDialogs.UserDialogs.Instance.Toast("Enter", new TimeSpan(3));
-                string connStr = "server=mysql-42457-0.cloudclusters.net;user=admin;database=fmsdb;port=19451;password=jaOuzvbF;";
                 MySqlConnection conn = new MySqlConnection(connStr);
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conn);
