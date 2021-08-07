@@ -29,7 +29,14 @@
                 </StackLayout>
             </Frame>
 
-            <Label Text="Address" Margin="20,10,20,0" FontSize="20"/>
+            <Label Text="Full Name" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="full_name"   BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+                    <Label Text="Address" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
                     <local:BorderlessEntry x:Name="address"  BackgroundColor="Black" Margin="10,0,10,-2"/>
@@ -47,6 +54,13 @@
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
                     <local:BorderlessEntry x:Name="nic"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Contact No" Margin="20,10,20,0" FontSize="20"/>
+            <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
+                <StackLayout>
+                    <local:BorderlessEntry x:Name="phoneNo"  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 

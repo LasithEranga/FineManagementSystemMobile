@@ -8,7 +8,7 @@
     <StackLayout>
         <FlexLayout HeightRequest="70" BackgroundColor="Black" Direction="Row">
             <Image Source="{local:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
-            <Label Text="Lasith" VerticalOptions="Center" Margin="85,20,0,0" FontSize="20"/>
+            <Label x:Name="name" Text="Lasith" VerticalOptions="Center" Margin="85,20,0,0" FontSize="20"/>
             <Image Source="{local:ImageResource FineManagementSystem.Images.user2.png}" Margin="130,0,0,0"/>
         </FlexLayout>
 

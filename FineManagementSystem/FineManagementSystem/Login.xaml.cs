@@ -34,7 +34,7 @@ namespace FineManagementSystem
                 {
                     //textFields will be cleared after verification of the the password 
                     Acr.UserDialogs.UserDialogs.Instance.Toast("Logged", new TimeSpan(3));
-                    await Navigation.PushAsync(new Home());
+                    await Navigation.PushAsync(new Home(dr.GetString("fname")));
                 }
                 else
                 {
@@ -46,7 +46,7 @@ namespace FineManagementSystem
             }
             catch (Exception ec)
             {
-                Acr.UserDialogs.UserDialogs.Instance.Toast(ec.Message+"jksdnf", new TimeSpan(3));
+                Acr.UserDialogs.UserDialogs.Instance.Toast("Login Failed!", new TimeSpan(3));
                 //new Error_messages.InputError("Login Failed", "Username or Password is incorrect").Show();
             }
             

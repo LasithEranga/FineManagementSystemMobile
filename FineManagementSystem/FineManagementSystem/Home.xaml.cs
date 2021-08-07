@@ -12,9 +12,10 @@ namespace FineManagementSystem
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
-        public Home()
+        public Home(string user_name)
         {
             InitializeComponent();
+            name.Text = user_name;
         }
         private async void SearchDriver(object sender, EventArgs e)
         {
