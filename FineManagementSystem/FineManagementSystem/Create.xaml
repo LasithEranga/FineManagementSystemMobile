@@ -4,23 +4,110 @@
              x:Class="FineManagementSystem.Create"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#e5e5e5">
-            <FlexLayout HeightRequest="70" BackgroundColor="Black" Direction="Row">
+        <StackLayout BackgroundColor="White">
+            <FlexLayout HeightRequest="70" BackgroundColor="#3E3838" Direction="Row">
                 <Image Source="{locall:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
                 <Frame CornerRadius="50" HeightRequest="40" Padding="0,8,20,-5" BackgroundColor="White" Margin="30,15,0,0" >
                     <StackLayout>
-                        <local:SearchEntry x:Name="searchBar"   BackgroundColor="White"  TextColor="Black" Margin="10,0,10,2"/>
+                        <local:SearchEntry x:Name="searchBar"   BackgroundColor="White"  TextColor="Black" Margin="10,0,10,2" Placeholder="Search Rule Here..." PlaceholderColor="#353b40" FontSize="16"/>
 
                     </StackLayout>
 
                 </Frame>
 
             </FlexLayout>
-            <FlexLayout Direction="Row">
-                <Image Source="{locall:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
-
+            <FlexLayout Direction="Row" Margin="0,-20,0,0">
+                <Image WidthRequest="65" HeightRequest="85" Source="{locall:ImageResource FineManagementSystem.Images.policeLogo.png}" Margin="15"/>
+                <FlexLayout Margin="0,35,0,0" Direction="Column" WidthRequest="230">
+                <Label Text="SPOT FINE STATEMENT" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="18"/>
+                <Label Text="Road Safety Act 1995" TextColor="Black" HorizontalTextAlignment="Center"/>
+                </FlexLayout>
+                <Image WidthRequest="65" HeightRequest="85" Source="{locall:ImageResource FineManagementSystem.Images.glogo.png}" Margin="15"/>
+                
             </FlexLayout>
-            
+            <StackLayout Margin="40,-20,0,0">
+            <FlexLayout Direction="Column" WidthRequest="300">
+                <Label Text="Fine Statement" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                <FlexLayout  HeightRequest="22"  WidthRequest="250" Direction="Row">
+                        <Label x:Name="stno" Text="Statement No"  TextColor="Black"/>
+                        <Label Text="   :"  TextColor="Black"/>
+                        <Label x:Name="stval" Text="65655" Margin="10,0,0,0" TextColor="Black"/>
+                </FlexLayout>
+                <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
+                        <Label  Text="OfficerID"  TextColor="Black"/>
+                        <Label Text="            :"  TextColor="Black"/>
+                        <Label x:Name="offcerID" Text="56564" Margin="10,0,0,0" TextColor="Black"/>
+                </FlexLayout>
+                <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
+                        <Label Text="Driver NIC"  TextColor="Black"/>
+                        <Label Text="          :"  TextColor="Black"/>
+                        <Label x:Name="driverNic"  Text="Fine Statement" Margin="10,0,0,0" TextColor="Black"/>
+                </FlexLayout>
+                <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
+                        <Label  Text="Issue Date"  TextColor="Black"/>
+                        <Label Text="         :"  TextColor="Black"/>
+                        <Label x:Name="date" Text="29/06/2019" Margin="10,0,0,0" TextColor="Black"/>
+                </FlexLayout>
+                <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
+                        <Label Text="Issue Time"  TextColor="Black"/>
+                        <Label Text="        :"  TextColor="Black"/>
+                        <Label x:Name="time" Text="13:01" Margin="10,0,0,0" TextColor="Black"/>
+                </FlexLayout>
+                <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
+                        <Label Text="Street"  TextColor="Black"/>
+                        <Label Text="                 :"  TextColor="Black"/>
+                        <Label x:Name="street" Text="Horana" Margin="10,0,0,0" TextColor="Black" />
+                </FlexLayout>
+                    <StackLayout x:Name="grid" BackgroundColor="Black">
+                        
+                    </StackLayout>
+                    <!--<ScrollView>
+                        <ListView x:Name="offence" IsVisible="True"   CachingStrategy="RecycleElement" BackgroundColor="Wheat" Margin="0,0,20,20"  AbsoluteLayout.LayoutFlags="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame>
+                                            <StackLayout BackgroundColor="White">
+                                                <FlexLayout Direction="Column">
+                                                    <Label Text="Offence"/>
+                                                    <FlexLayout Direction="Row">
+                                                        <Label Text="Offence ID" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
+                                                    </FlexLayout>
+                                                    <FlexLayout Direction="Row">
+                                                        <Label Text="Offence Date" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
+                                                    </FlexLayout>
+                                                    <FlexLayout Direction="Row">
+                                                        <Label Text="Offence Time" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
+                                                    </FlexLayout>
+                                                    <Label Text="Description"/>
+                                                    <Label Text="{Binding .}"/>
+
+                                                    <FlexLayout Direction="Row">
+                                                        <Label Text="Penalty" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
+                                                    </FlexLayout>
+                                                    <FlexLayout Direction="Row">
+                                                        <Label Text="Due Date" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
+                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
+                                                    </FlexLayout>
+                                                </FlexLayout>
+                                            </StackLayout>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>-->
+                </FlexLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

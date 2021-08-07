@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,15 @@ namespace FineManagementSystem
         public Create()
         {
             InitializeComponent();
+            OffenceList list = new OffenceList("scd","csd","dsc","dsc");
+            ArrayList lis = list.GetTemplate();
+            foreach (Label l in lis)
+            {
+               
+            }
         }
+
+
+
     }
 }

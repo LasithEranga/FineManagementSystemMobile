@@ -22,7 +22,7 @@ namespace FineManagementSystem
             ListOfStore();
         }
         MySqlConnection conn = Fine_Management_System.DBConnection.DB.GetConn();
-        public async void ListOfStore() //List of Countries  
+        public async void ListOfStore()   
         {
             MySqlDataReader dr = null;
             MySqlCommand cmd;
@@ -36,34 +36,34 @@ namespace FineManagementSystem
                     data.Add(dr.GetString("police_id"));
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await DisplayAlert("", "" + ex, "Ok");
+                await DisplayAlert("", "Network Error!", "Ok");
             }
         }
 
         private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            countryListView.IsVisible = true;
-            countryListView.BeginRefresh();
+            SearchListView.IsVisible = true;
+            SearchListView.BeginRefresh();
 
             try
             {
                 var dataEmpty = data.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));
 
                 if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                    countryListView.IsVisible = false;
+                    SearchListView.IsVisible = false;
                 else if (dataEmpty.Max().Length == 0)
-                    countryListView.IsVisible = false;
+                    SearchListView.IsVisible = false;
                 else
-                    countryListView.ItemsSource = data.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));
+                    SearchListView.ItemsSource = data.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                countryListView.IsVisible = false;
+                SearchListView.IsVisible = false;
 
             }
-            countryListView.EndRefresh();
+            SearchListView.EndRefresh();
 
         }
 
@@ -74,7 +74,7 @@ namespace FineManagementSystem
 
             String listsd = e.Item as string;
             searchBar.Text = listsd;
-            countryListView.IsVisible = false;
+            SearchListView.IsVisible = false;
 
             ((ListView)sender).SelectedItem = null;
         }

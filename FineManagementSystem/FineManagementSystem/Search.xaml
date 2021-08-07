@@ -18,7 +18,7 @@
             </FlexLayout>
 
             <ScrollView>
-                <ListView x:Name="countryListView" IsVisible="False"   CachingStrategy="RecycleElement" BackgroundColor="White" ItemTapped="ListView_OnItemTapped" AbsoluteLayout.LayoutBounds="20,110,269,160" AbsoluteLayout.LayoutFlags="None">
+                <ListView x:Name="SearchListView" IsVisible="False"   CachingStrategy="RecycleElement" BackgroundColor="White" ItemTapped="ListView_OnItemTapped" AbsoluteLayout.LayoutBounds="20,110,269,160" AbsoluteLayout.LayoutFlags="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

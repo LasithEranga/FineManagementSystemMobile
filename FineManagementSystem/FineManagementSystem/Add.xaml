@@ -18,63 +18,63 @@
             <Label Text="First Name" Margin="20,20,20,0" FontSize="20"/>
             <Frame CornerRadius="50"  HeightRequest="40" Padding="5,8,0,-5"  BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout >
-                    <local:BorderlessEntry x:Name="fname"  BackgroundColor="Black" Margin="10,0,10,0"/>
+                            <local:BorderlessEntry x:Name="fname" Text=""  BackgroundColor="Black" Margin="10,0,10,0"/>
                 </StackLayout>
             </Frame>
 
             <Label Text="Last Name" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="lname"   BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="lname" Text=""  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 
             <Label Text="Full Name" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="full_name"   BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="full_name"  Text=""  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 
                     <Label Text="Address" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="address"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="address" Text=""  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 
             <Label Text="Email Address" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="email"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="email" Text=""  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 
             <Label Text="Owner NIC" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="nic"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="nic" Text=""  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 
             <Label Text="Contact No" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="phoneNo"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="phoneNo" Text="" BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
 
-                    <Label Text="License" Margin="20,10,20,0" FontSize="20"/>
+                    <Label Text="License No" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="license"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                    <local:BorderlessEntry x:Name="license" Text="" BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
                 
             <Label Text="Vehicle No" Margin="20,10,20,0" FontSize="20"/>
             <Frame CornerRadius="50" HeightRequest="40" Padding="5,8,0,-5" BackgroundColor="Black" Margin="10,0,10,0" >
                 <StackLayout>
-                    <local:BorderlessEntry x:Name="no_plate"  BackgroundColor="Black" Margin="10,0,10,-2"/>
+                            <local:BorderlessEntry x:Name="no_plate" Text=""  BackgroundColor="Black" Margin="10,0,10,-2"/>
                 </StackLayout>
             </Frame>
                     <Frame BackgroundColor="Transparent">
