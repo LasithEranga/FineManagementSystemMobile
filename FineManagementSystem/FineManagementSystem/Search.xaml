@@ -7,14 +7,30 @@
         <StackLayout>
             <FlexLayout HeightRequest="70" BackgroundColor="Black" Direction="Row">
                 <Image Source="{local1:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
-                <FlexLayout Direction="Row">
-                    <Image Source="{local1:ImageResource FineManagementSystem.Images.Search.png}" Margin="0,0,0,0"/>
-                    <local:BorderlessEntry x:Name="no_plate"  BackgroundColor="Black" TextColor="Black" Margin="10,0,0,-2"/>
-                </FlexLayout>
+                <Frame CornerRadius="50" HeightRequest="40" Padding="0,8,20,-5" BackgroundColor="White" Margin="30,15,0,0" >
+                    <StackLayout>
+                        <local:SearchEntry x:Name="searchBar"  TextChanged="SearchBar_OnTextChanged"   BackgroundColor="White"  TextColor="Black" Margin="10,0,10,2"/>
+
+                    </StackLayout>
+
+                </Frame>
+
             </FlexLayout>
-            
+
             <ScrollView>
-                <Label Text="item1"/>
+                <ListView x:Name="countryListView" IsVisible="False"   CachingStrategy="RecycleElement" BackgroundColor="White" ItemTapped="ListView_OnItemTapped" AbsoluteLayout.LayoutBounds="20,110,269,160" AbsoluteLayout.LayoutFlags="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame>
+                                    <StackLayout BackgroundColor="White">
+                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

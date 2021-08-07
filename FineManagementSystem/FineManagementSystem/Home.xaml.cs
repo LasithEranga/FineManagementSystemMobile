@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,27 @@ namespace FineManagementSystem
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
-        public Home(string user_name)
+
+        public Home(string user_name, string id)
         {
+            MySqlDataReader dr=null;
+            
             InitializeComponent();
             name.Text = user_name;
+            /*try
+            {
+                dr = Fine_Management_System.DBConnection.DB.Read("SELECT COUNT(Ref_No) as count FROM fine_receipt WHERE officer_id = "+id+" AND Date= CURDATE()");
+                while (dr.Read())
+                {
+                    DisplayAlert(dr.GetString("count"), "", "Ok");
+                    num.Text = dr.GetString("count");
+                }
+                
+            }
+            catch (Exception ex){
+                DisplayAlert(ex.Message,"","Ok");
+            }*/
+
         }
         private async void SearchDriver(object sender, EventArgs e)
         {

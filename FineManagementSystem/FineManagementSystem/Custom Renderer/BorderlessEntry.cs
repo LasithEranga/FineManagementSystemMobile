@@ -8,4 +8,9 @@ namespace FineManagementSystem.Custom_Renderer
     public class BorderlessEntry:Entry
     {
     }
+
+    public class SearchEntry : Entry
+    {
+
+    }
 }

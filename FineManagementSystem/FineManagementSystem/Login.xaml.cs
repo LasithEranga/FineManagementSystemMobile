@@ -23,7 +23,8 @@ namespace FineManagementSystem
         private async void Go(object sender, EventArgs e)
         {
             MySqlDataReader dr = null;
-            dr = Fine_Management_System.DBConnection.DB.Read("select fname, police_id from traffic_police_officer where police_id = "+password.Text+";");
+   
+            dr = Fine_Management_System.DBConnection.DB.Read("select fname, police_id from traffic_police_officer where police_id = "+password.Text+ ";");
 
             try
             {
@@ -33,8 +34,9 @@ namespace FineManagementSystem
                 if (dr.GetString("fname").Equals(usrName.Text) && dr.GetString("police_id").Equals(password.Text))
                 {
                     //textFields will be cleared after verification of the the password 
-                    Acr.UserDialogs.UserDialogs.Instance.Toast("Logged", new TimeSpan(3));
-                    await Navigation.PushAsync(new Home(dr.GetString("fname")));
+                    Acr.UserDialogs.UserDialogs.Instance.Toast("Login succeed!", new TimeSpan(3));
+                    await Navigation.PushAsync(new Home(dr.GetString("fname"), dr.GetString("police_id")));
+                    dr.Close();
                 }
                 else
                 {
