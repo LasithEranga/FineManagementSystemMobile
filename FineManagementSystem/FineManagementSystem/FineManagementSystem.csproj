@@ -11,8 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\glogo.png" />
     <None Remove="Images\go.png" />
     <None Remove="Images\menu.png" />
+    <None Remove="Images\policeLogo.png" />
     <None Remove="Images\Search.png" />
     <None Remove="Images\Sri_Lanka_Police_logo 2.png" />
     <None Remove="Images\user.png" />
@@ -20,8 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\glogo.png" />
     <EmbeddedResource Include="Images\go.png" />
     <EmbeddedResource Include="Images\menu.png" />
+    <EmbeddedResource Include="Images\policeLogo.png" />
     <EmbeddedResource Include="Images\Search.png" />
     <EmbeddedResource Include="Images\Sri_Lanka_Police_logo 2.png" />
     <EmbeddedResource Include="Images\user.png" />
@@ -53,6 +57,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Search.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ShowDriver.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,20 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FineManagementSystem
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Create : ContentPage
+    public partial class ShowDriver : ContentPage
     {
-        public Create()
+        public ShowDriver()
         {
             InitializeComponent();
-            OffenceList list = new OffenceList("scd","csd","dsc","dsc");
-            ArrayList lis = list.GetTemplate();
-            foreach (Label l in lis)
-            {
-               
-            }
         }
-
-
-
     }
 }

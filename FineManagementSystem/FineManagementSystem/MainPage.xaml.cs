@@ -1,6 +1,8 @@
 ﻿using Acr.UserDialogs;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -15,18 +17,14 @@ namespace FineManagementSystem
         public MainPage()
         {
             InitializeComponent();
-        }
-
-         void Loginke(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new Login();
+            
         }
 
         private async void Login(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Login());
         }
-
+        
 
     }
 }
