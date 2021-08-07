@@ -1,11 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FineManagementSystem.Custom_Renderer" xmlns:local1="clr-namespace:FineManagementSystem"
              x:Class="FineManagementSystem.Search"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
+            <FlexLayout HeightRequest="70" BackgroundColor="Black" Direction="Row">
+                <Image Source="{local1:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
+                <FlexLayout Direction="Row">
+                    <Image Source="{local1:ImageResource FineManagementSystem.Images.Search.png}" Margin="0,0,0,0"/>
+                    <local:BorderlessEntry x:Name="no_plate"  BackgroundColor="Black" TextColor="Black" Margin="10,0,0,-2"/>
+                </FlexLayout>
+            </FlexLayout>
             
+            <ScrollView>
+                <Label Text="item1"/>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
