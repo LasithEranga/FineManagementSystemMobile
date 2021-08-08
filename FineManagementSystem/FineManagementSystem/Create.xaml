@@ -31,82 +31,218 @@
                 <FlexLayout  HeightRequest="22"  WidthRequest="250" Direction="Row">
                         <Label x:Name="stno" Text="Statement No"  TextColor="Black"/>
                         <Label Text="   :"  TextColor="Black"/>
-                        <Label x:Name="stval" Text="65655" Margin="10,0,0,0" TextColor="Black"/>
+                        <Label x:Name="stval" Text="" Margin="10,0,0,0" TextColor="Black"/>
                 </FlexLayout>
                 <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
                         <Label  Text="OfficerID"  TextColor="Black"/>
                         <Label Text="            :"  TextColor="Black"/>
-                        <Label x:Name="offcerID" Text="56564" Margin="10,0,0,0" TextColor="Black"/>
+                        <Label x:Name="offcerID" Text="" Margin="10,0,0,0" TextColor="Black"/>
                 </FlexLayout>
                 <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
                         <Label Text="Driver NIC"  TextColor="Black"/>
                         <Label Text="          :"  TextColor="Black"/>
-                        <Label x:Name="driverNic"  Text="Fine Statement" Margin="10,0,0,0" TextColor="Black"/>
+                        <Label x:Name="driverNic"  Text="" Margin="10,0,0,0" TextColor="Black"/>
                 </FlexLayout>
                 <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
                         <Label  Text="Issue Date"  TextColor="Black"/>
                         <Label Text="         :"  TextColor="Black"/>
-                        <Label x:Name="date" Text="29/06/2019" Margin="10,0,0,0" TextColor="Black"/>
+                        <Label x:Name="date" Text="" Margin="10,0,0,0" TextColor="Black"/>
                 </FlexLayout>
                 <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
                         <Label Text="Issue Time"  TextColor="Black"/>
                         <Label Text="        :"  TextColor="Black"/>
-                        <Label x:Name="time" Text="13:01" Margin="10,0,0,0" TextColor="Black"/>
+                        <Label x:Name="time" Text="" Margin="10,0,0,0" TextColor="Black"/>
                 </FlexLayout>
-                <FlexLayout HeightRequest="22"  WidthRequest="250" Direction="Row">
-                        <Label Text="Street"  TextColor="Black"/>
-                        <Label Text="                 :"  TextColor="Black"/>
-                        <Label x:Name="street" Text="Horana" Margin="10,0,0,0" TextColor="Black" />
-                </FlexLayout>
+                
                     <StackLayout x:Name="grid" BackgroundColor="Black">
                         
                     </StackLayout>
-                    <!--<ScrollView>
-                        <ListView x:Name="offence" IsVisible="True"   CachingStrategy="RecycleElement" BackgroundColor="Wheat" Margin="0,0,20,20"  AbsoluteLayout.LayoutFlags="None">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <Frame>
-                                            <StackLayout BackgroundColor="White">
-                                                <FlexLayout Direction="Column">
-                                                    <Label Text="Offence"/>
-                                                    <FlexLayout Direction="Row">
-                                                        <Label Text="Offence ID" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
-                                                    </FlexLayout>
-                                                    <FlexLayout Direction="Row">
-                                                        <Label Text="Offence Date" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
-                                                    </FlexLayout>
-                                                    <FlexLayout Direction="Row">
-                                                        <Label Text="Offence Time" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
-                                                    </FlexLayout>
-                                                    <Label Text="Description"/>
-                                                    <Label Text="{Binding .}"/>
-
-                                                    <FlexLayout Direction="Row">
-                                                        <Label Text="Penalty" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
-                                                    </FlexLayout>
-                                                    <FlexLayout Direction="Row">
-                                                        <Label Text="Due Date" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text=":" FontSize="16" TextColor="#FF464859"/>
-                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>
-                                                    </FlexLayout>
-                                                </FlexLayout>
-                                            </StackLayout>
-                                        </Frame>
-                                    </ViewCell>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </ScrollView>-->
+                   
                 </FlexLayout>
+                <ScrollView>
+                    <FlexLayout Direction="Column" WidthRequest="300">
+                        <StackLayout x:Name="view1" IsVisible="true">
+                        <Label Text="Offence" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                        <FlexLayout Margin="20,0,0,0"  HeightRequest="22"  WidthRequest="250" Direction="Row">
+                            <Label Text="OffenceID"  TextColor="Black"/>
+                            <Label Text="        :"  TextColor="Black"/>
+                            <Label x:Name="id1" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                        </FlexLayout>
+                        <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                            <Label  Text="Offence Date"  TextColor="Black"/>
+                            <Label Text="   :"  TextColor="Black"/>
+                            <Label x:Name="date1" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                        </FlexLayout>
+                        <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                            <Label  Text="Offence Time"  TextColor="Black"/>
+                            <Label Text="  :"  TextColor="Black"/>
+                            <Label x:Name="time1" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                        </FlexLayout>
+
+                        <Label   Text="Description" Margin="0,10,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+
+                        <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                            <Label x:Name="des1" Text=""  TextColor="Black"/>
+                        </FlexLayout>
+
+                        <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                            <Label  Text="Panelty    : Rs: "  TextColor="Black"/>
+                            <Label x:Name="pen1" Text=""  TextColor="Black"/>
+                        </FlexLayout>
+                        <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                            <Label  Text="Due Date : "  TextColor="Black"/>
+                            <Label x:Name="due1" Text=""  TextColor="Black"/>
+                        </FlexLayout>
+                        </StackLayout>
+
+                        <StackLayout x:Name="view2" IsVisible="false">
+                            <Label Text="Offence" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                            <FlexLayout Margin="20,0,0,0"  HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label Text="OffenceID"  TextColor="Black"/>
+                                <Label Text="        :"  TextColor="Black"/>
+                                <Label x:Name="id2" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Date"  TextColor="Black"/>
+                                <Label Text="   :"  TextColor="Black"/>
+                                <Label x:Name="date2" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Time"  TextColor="Black"/>
+                                <Label Text="  :"  TextColor="Black"/>
+                                <Label x:Name="time2" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+
+                            <Label   Text="Description" Margin="0,10,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label x:Name="des2" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Panelty    : "  TextColor="Black"/>
+                                <Label x:Name="pen2" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Due Date : "  TextColor="Black"/>
+                                <Label x:Name="due2" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                        </StackLayout>
+
+                        <StackLayout x:Name="view3" IsVisible="false">
+                            <Label Text="Offence" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                            <FlexLayout Margin="20,0,0,0"  HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label Text="OffenceID"  TextColor="Black"/>
+                                <Label Text="        :"  TextColor="Black"/>
+                                <Label x:Name="id3" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Date"  TextColor="Black"/>
+                                <Label Text="   :"  TextColor="Black"/>
+                                <Label x:Name="date3" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Time"  TextColor="Black"/>
+                                <Label Text="  :"  TextColor="Black"/>
+                                <Label x:Name="time3" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+
+                            <Label   Text="Description" Margin="0,10,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label x:Name="des3" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Panelty    : "  TextColor="Black"/>
+                                <Label x:Name="pen3" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Due Date : "  TextColor="Black"/>
+                                <Label x:Name="due3" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                        </StackLayout>
+
+                        <StackLayout x:Name="view4" IsVisible="false">
+                            <Label Text="Offence" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                            <FlexLayout Margin="20,0,0,0"  HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label Text="OffenceID"  TextColor="Black"/>
+                                <Label Text="        :"  TextColor="Black"/>
+                                <Label x:Name="id4" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Date"  TextColor="Black"/>
+                                <Label Text="   :"  TextColor="Black"/>
+                                <Label x:Name="date4" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Time"  TextColor="Black"/>
+                                <Label Text="  :"  TextColor="Black"/>
+                                <Label x:Name="time4" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+
+                            <Label   Text="Description" Margin="0,10,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label x:Name="des4" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Panelty    : "  TextColor="Black"/>
+                                <Label x:Name="pen4" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Due Date : "  TextColor="Black"/>
+                                <Label x:Name="due4" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                        </StackLayout>
+
+
+                        <StackLayout x:Name="view5" IsVisible="false">
+                            <Label Text="Offence" Margin="0,0,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                            <FlexLayout Margin="20,0,0,0"  HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label Text="OffenceID"  TextColor="Black"/>
+                                <Label Text="        :"  TextColor="Black"/>
+                                <Label x:Name="id5" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Date"  TextColor="Black"/>
+                                <Label Text="   :"  TextColor="Black"/>
+                                <Label x:Name="date5" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Offence Time"  TextColor="Black"/>
+                                <Label Text="  :"  TextColor="Black"/>
+                                <Label x:Name="time5" Text="" Margin="10,0,0,0" TextColor="Black"/>
+                            </FlexLayout>
+
+                            <Label   Text="Description" Margin="0,10,0,10" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label x:Name="des5" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Panelty    : "  TextColor="Black"/>
+                                <Label x:Name="pen5" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="20,0,0,0" HeightRequest="22"  WidthRequest="250" Direction="Row">
+                                <Label  Text="Due Date : "  TextColor="Black"/>
+                                <Label x:Name="due5" Text=""  TextColor="Black"/>
+                            </FlexLayout>
+
+                        </StackLayout>
+
+                    </FlexLayout>
+                </ScrollView>
+                <Frame BackgroundColor="Transparent">
+                    <FlexLayout Direction="Row">
+                        <Button Text="Save Receipt" FontSize="20" Margin="20,0,0,0" Padding="30,0,30,0"  CornerRadius="8" BackgroundColor="#2D8DD6" TextColor="White"></Button>
+                    </FlexLayout>
+                </Frame>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
