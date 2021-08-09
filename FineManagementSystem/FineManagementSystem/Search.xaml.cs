@@ -70,8 +70,7 @@ namespace FineManagementSystem
 
         private void ListView_OnItemTapped(Object sender, ItemTappedEventArgs e)
         {
-            //EmployeeListView.IsVisible = false;  
-
+            
             String listsd = e.Item as string;
             searchBar.Text = listsd;
             SearchListView.IsVisible = false;

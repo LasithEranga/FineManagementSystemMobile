@@ -13,10 +13,9 @@
         </FlexLayout>
 
         <FlexLayout HeightRequest="150" BackgroundColor="White" Margin="10" >
-            <StackLayout Margin="10,10,0,0">
-
-                <Label Text="Today" TextColor="red" FontSize="35" />
-                <Label x:Name="num" Text="" TextColor="Red" FontSize="25"/>
+            <StackLayout Margin="10,10,0,0" >
+                <Label Text="Today" TextColor="red" FontSize="35" Margin="16,0,0,0" />
+                <Label x:Name="num" Text="" TextColor="Red" FontSize="25" Margin="20,0,0,0"/>
             </StackLayout>
         </FlexLayout>
 
