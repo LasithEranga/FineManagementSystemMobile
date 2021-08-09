@@ -8,15 +8,14 @@
     <StackLayout>
         <FlexLayout HeightRequest="70" BackgroundColor="Black" Direction="Row">
             <Image Source="{local:ImageResource FineManagementSystem.Images.menu.png}" Margin="15"/>
-            <Label Text="Lasith" VerticalOptions="Center" Margin="85,20,0,0" FontSize="20"/>
+            <Label x:Name="name" Text="" VerticalOptions="Center" Margin="85,20,0,0" FontSize="20"/>
             <Image Source="{local:ImageResource FineManagementSystem.Images.user2.png}" Margin="130,0,0,0"/>
         </FlexLayout>
 
         <FlexLayout HeightRequest="150" BackgroundColor="White" Margin="10" >
-            <StackLayout Margin="10,10,0,0">
-
-                <Label Text="Today" TextColor="red" FontSize="25" />
-                <Label Text="5645 Fine Recipts" TextColor="Red"/>
+            <StackLayout Margin="10,10,0,0" >
+                <Label Text="Today" TextColor="red" FontSize="35" Margin="16,0,0,0" />
+                <Label x:Name="num" Text="" TextColor="Red" FontSize="25" Margin="20,0,0,0"/>
             </StackLayout>
         </FlexLayout>
 
