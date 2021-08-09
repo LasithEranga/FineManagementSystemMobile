@@ -22,6 +22,7 @@ namespace FineManagementSystem
 
         private async void Login(object sender, EventArgs e)
         {
+            
             await Navigation.PushAsync(new Login());
         }
         

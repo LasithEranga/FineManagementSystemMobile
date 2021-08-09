@@ -29,14 +29,15 @@ namespace FineManagementSystem
                     dr = Fine_Management_System.DBConnection.DB.Read("select fname, police_id from traffic_police_officer where password = '" + MD5Hashing.Encryption(password.Text) + "' AND fname='" + usrName.Text + "';");
 
                     dr.Read();
-                    
+                    string id = "";
                     if (dr.GetString("fname").Equals(usrName.Text))
                     {
                         //textFields will be cleared after verification of the the password 
                         Acr.UserDialogs.UserDialogs.Instance.Toast("Login succeed!", new TimeSpan(3));
                         usrName.Text = "";
                         password.Text = "";
-                        await Navigation.PushAsync(new Home(dr.GetString("fname"), dr.GetString("police_id")));
+                        id = dr.GetString("police_id");
+                        await Navigation.PushAsync(new Home(dr.GetString("fname"),id));
                         dr.Close();
                     }
                     else
